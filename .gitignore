@@ -1,0 +1,12 @@
+.DS_Store
+.quarto/
+/.Rproj.user/
+.Rhistory
+.RData
+/_site/
+**/presentacion.html
+**/presentacion_files/
+/taller */sesion */mathjax-config.js
+
+/.quarto/
+**/*.quarto_ipynb

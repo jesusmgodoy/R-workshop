@@ -1,0 +1,12 @@
+---
+lang: es
+format:
+  clean-revealjs:
+    output-file: index.html
+    width: 1280
+    height: 720
+    embed-resources: true
+    title-slide: false
+---
+
+## {.blank}
