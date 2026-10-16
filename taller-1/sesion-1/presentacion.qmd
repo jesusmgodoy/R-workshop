@@ -8,6 +8,7 @@ author:
     affiliations: "Departamento de Sociología<br>Universidad de Granada"
   - name: Nadia Adelshina
     # orcid: "" # Pendiente; descomentar para mostrarlo.
+    email: anadia@ugr.es
     affiliations: "Departamento de Ciencia Política y de la Administración<br>Universidad de Granada"
 date: 2026-11-06
 date-format: long
@@ -19,6 +20,173 @@ format:
     height: 720
     embed-resources: true
     title-slide: true
+    footer: "Taller 1 · Fundamentos de R para las Ciencias Sociales — Sesión 1 · Introducción a R y RStudio"
+    # title-logo: logos/portada.svg # La posición bajo la fecha se define en estilos.css.
+    css: estilos.css
+    include-after-body:
+      text: |
+        <script src="confeti.js"></script>
 ---
 
-## {.blank}
+## ¡Bienvenidos! {#bienvenida .center}
+
+## ¿Por qué R? {#por-que-r}
+
+1. Está especialmente orientado al análisis estadístico
+2. Su ecosistema facilita el tratamiento de datos
+3. Tiene herramientas excelentes para la visualización científica
+4. Facilita un flujo completo de investigación reproducible
+5. Existe una comunidad importante de investigadores que desarrolla herramientas estadísticas en R
+6. Es de código abierto: no requiere pagar licencias y permite consultar, modificar y compartir su código.
+
+## ¿En qué es mejor Python? {#por-que-python}
+
+La diferencia se aprecia especialmente en tres situaciones.
+
+1. **Análisis de textos a gran escala.** Si quieres procesar millones de documentos, utilizar modelos de lenguaje o aplicar técnicas avanzadas de NLP, Python suele ofrecer más posibilidades.
+2. **Recopilación automatizada de datos.** Python es especialmente versátil para trabajar con APIs, scraping, automatización de navegadores y sistemas de extracción de información.
+3. **Inteligencia artificial y aprendizaje automático.** Bibliotecas como PyTorch, TensorFlow y scikit-learn hacen de Python una elección muy habitual para desarrollar modelos de aprendizaje automático.
+
+Eso no implica que R no pueda realizar estas tareas, sino que Python suele contar con un ecosistema más amplio en estos ámbitos.
+
+## R y Python: ¿cuál elegir? {#r-vs-python}
+
+Depende del tipo de investigación. Ambos lenguajes son complementarios.
+
+:::: {.columns}
+
+::: {.column width="30%"}
+<!-- Encabezado anterior: R -->
+### ![R](logos/r.svg){height=56px}
+
+**Investigación cuantitativa**
+
+Encuestas, análisis electoral, regresiones, inferencia causal y modelos multinivel.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+<!-- Encabezado anterior: Python -->
+### ![Python](logos/python.svg){height=56px}
+
+**Investigación computacional intensiva**
+
+Textos a gran escala, NLP avanzado, aprendizaje profundo y recopilación automatizada de datos.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+<!-- Encabezado anterior: R + Python -->
+### ![R](logos/r.svg){height=56px} + ![Python](logos/python.svg){height=56px}
+
+**Proyectos complejos**
+
+<!-- Versión anterior: Recopilar y procesar documentos con Python → analizarlos estadísticamente con R. -->
+1. Recopilar y procesar documentos con **Python**.
+2. Analizarlos estadísticamente con **R**.
+:::
+
+::::
+
+**En este taller empezamos con R:** su diseño y su ecosistema están especialmente alineados con el análisis cuantitativo en Ciencias Sociales. Permite integrar preparación, análisis, visualización y comunicación de resultados en un entorno reproducible.
+
+::: {.notes}
+**Entonces, ¿cuál elegiría para investigar en Ciencias Sociales?**
+
+Logotipos: [R, © 2016 The R Foundation](https://www.r-project.org/logo/),
+sin modificaciones, bajo [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/);
+[Python, Python Software Foundation](https://www.python.org/community/logos/),
+sin modificaciones.
+
+Depende fundamentalmente del tipo de investigación.
+
+**Investigación cuantitativa tradicional: R**
+
+Encuestas, análisis electoral, regresiones, inferencia causal, modelos multinivel,
+demografía, psicometría o evaluación de políticas públicas.
+
+R ofrece un entorno especialmente adaptado a estos trabajos.
+
+**Investigación computacional intensiva: Python**
+
+Procesamiento masivo de textos, NLP avanzado, aprendizaje profundo, visión
+artificial, recopilación automatizada de datos y desarrollo de herramientas
+informáticas.
+
+Python suele ofrecer mayor flexibilidad y más herramientas especializadas.
+
+**Proyectos complejos: utilizar ambos**
+
+Por ejemplo, recopilar documentos de una API y procesarlos con Python, exportar
+los resultados y analizarlos estadísticamente con R.
+
+Ambos lenguajes son complementarios y pueden integrarse en un mismo proyecto.
+
+**¿Cómo justificaría la elección de R en una primera clase?**
+
+No presentaría R como un lenguaje superior a Python. Es una afirmación difícil de
+defender y, además, innecesaria.
+
+Explicaría que R es una puerta de entrada especialmente adecuada a la programación
+orientada al análisis estadístico y a la investigación social cuantitativa, porque
+ofrece un ecosistema coherente para trabajar con datos y comunicar resultados.
+
+De hecho, para una diapositiva inicial utilizaría esta formulación:
+
+> ¿Por qué R?
+>
+> Porque está especialmente diseñado para trabajar con datos y realizar análisis
+> estadísticos, dispone de numerosas herramientas desarrolladas para la
+> investigación científica y permite integrar preparación, análisis, visualización
+> y comunicación de resultados en un entorno reproducible.
+>
+> No es la única opción: Python ofrece capacidades similares en muchos ámbitos y
+> destaca especialmente en automatización, inteligencia artificial y análisis
+> computacional avanzado. La elección depende de las necesidades de cada
+> investigación.
+
+Mi conclusión: si tuviera que elegir un primer lenguaje para enseñar programación
+a investigadores de Ciencias Sociales cuyo objetivo principal es analizar datos
+cuantitativos, elegiría R. No porque sea intrínsecamente más riguroso o produzca
+mejores resultados científicos que Python, sino porque su diseño y su ecosistema
+están especialmente alineados con las prácticas habituales de la investigación
+estadística.
+:::
+
+<!-- Diapositiva retirada; se conserva comentada.
+
+## ¿Por qué aprender a programar para investigar? {#por-que-programar}
+
+| Ventaja | Aplicación a la investigación |
+|:---|:-----------|
+| [Reproducibilidad]{.alert} | Podemos repetir el análisis con los mismos datos y obtener los mismos resultados, siempre que controlemos las condiciones de ejecución. |
+| Transparencia | Las decisiones analíticas quedan documentadas en el código. |
+| Automatización | Podemos ejecutar un análisis completo sin repetir manualmente cada operación. |
+| Escalabilidad | Podemos trabajar con bases de datos y procedimientos complejos. |
+| Flexibilidad | Podemos adaptar los análisis a nuestras preguntas de investigación. |
+
+Este argumento no es exclusivo de R: también es una razón para utilizar Python, Stata con scripts u otros entornos programables.
+
+::: {.notes}
+Antes de comparar lenguajes, explicar qué ventajas tiene utilizar herramientas
+basadas en código frente a depender exclusivamente de interfaces gráficas, como
+SPSS o Excel.
+
+Detenerse especialmente en la reproducibilidad con un ejemplo próximo a nuestra
+actividad:
+
+Imaginemos que estamos analizando una encuesta del CIS. Hemos recodificado
+variables, excluido determinadas observaciones, aplicado ponderaciones y elaborado
+varias tablas y gráficos. Tres meses después queremos repetir el análisis con una
+nueva encuesta.
+
+Si hemos utilizado exclusivamente operaciones manuales, tendremos que recordar lo
+que hicimos y repetirlo. Si hemos preparado un script, gran parte del proceso
+estará documentado y podrá volver a ejecutarse.
+:::
+
+-->

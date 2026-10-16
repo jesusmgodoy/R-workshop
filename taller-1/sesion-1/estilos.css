@@ -1,0 +1,126 @@
+/* Identificación discreta del taller y la sesión en todas las diapositivas. */
+body .reveal .footer {
+  display: block !important;
+  left: 50%;
+  right: auto;
+  bottom: 10px;
+  width: auto;
+  max-width: 85%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #777;
+  transform: translateX(-50%);
+}
+
+body .reveal .footer p {
+  margin: 0;
+}
+
+/* Tamaño del conjunto de logos en la portada. */
+:root {
+  --title-logo-width: 391px;
+  --title-logo-height: 110.5px;
+}
+
+/* Posición anterior, conservada como referencia.
+body .reveal .slides:has(> section#title-slide.present)::after {
+  top: auto;
+  bottom: 20px;
+  right: -20px;
+}
+*/
+
+/* Logos bajo la fecha, alineados a la izquierda y separados del texto. */
+.reveal #title-slide .date::after {
+  content: "";
+  display: block;
+  width: var(--title-logo-width);
+  height: var(--title-logo-height);
+  margin-top: 36px;
+  background: url("logos/portada.svg") left top / contain no-repeat;
+}
+
+/* Alinear los logotipos de los lenguajes en las tres columnas del resumen. */
+.reveal #r-vs-python h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  min-height: 56px;
+}
+
+.reveal #r-vs-python h3 img {
+  height: 56px;
+  width: auto;
+  margin: 0;
+}
+
+/* Bienvenida: conservar la tipografía de Clean y centrar el saludo. */
+.reveal #bienvenida {
+  text-align: center;
+}
+
+.reveal #bienvenida h2 {
+  font-size: 2.6em;
+}
+
+/* Repetir la entrada cada vez que se vuelve a esta diapositiva. */
+.reveal #bienvenida.present h2 {
+  animation: entrada-bienvenida 1.1s ease-out both;
+}
+
+@keyframes entrada-bienvenida {
+  0% {
+    opacity: 0;
+    transform: translateY(32px) scale(0.85);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.04);
+  }
+  80% {
+    transform: translateY(3px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Confeti decorativo, sin interceptar la navegación de la presentación. */
+.confeti {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.confeti span {
+  position: absolute;
+  top: -20px;
+  width: 8px;
+  height: 14px;
+  animation: caer-confeti var(--duracion) var(--retraso) linear both;
+}
+
+@keyframes caer-confeti {
+  from {
+    transform: translate3d(0, -20px, 0) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(var(--deriva), 110vh, 0) rotate(var(--giro));
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce), print {
+  .reveal #bienvenida.present h2 {
+    animation: none;
+  }
+
+  .confeti {
+    display: none;
+  }
+}

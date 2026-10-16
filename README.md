@@ -11,6 +11,10 @@ La procedencia y licencia del tema Clean están documentadas en `REFERENCIA.md`.
 
 ## Edición y generación
 
+Vista local de la primera sesión: <http://127.0.0.1:8769/taller-1/sesion-1/>.
+Para iniciar la vista con recarga automática, ejecutar `./previsualizar.sh`
+desde la raíz y mantener el proceso activo. El script fija el puerto 8769.
+
 Desde la raíz del repositorio:
 
 ```bash

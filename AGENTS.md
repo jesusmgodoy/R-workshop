@@ -56,6 +56,8 @@ proyecto en este archivo; `CLAUDE.md` solo lo importa para evitar duplicarlas.
 
 ## Comprobación y colaboración
 
+- Trabajar localmente por defecto. No subir cambios a GitHub ni publicar nuevas
+  versiones en Pages hasta que Jesús o Nadia lo soliciten explícitamente.
 - Antes de editar, revisar el estado de Git y los archivos afectados. Puede haber
   trabajo de Jesús o Nadia sin confirmar; no borrarlo, revertirlo ni sobrescribirlo.
 - Al modificar la presentación o su configuración, ejecutar desde la raíz:
@@ -66,6 +68,9 @@ proyecto en este archivo; `CLAUDE.md` solo lo importa para evitar duplicarlas.
 
 - Para previsualizar la primera presentación:
   `quarto preview "taller-1/sesion-1/presentacion.qmd"`.
+- La vista local compartida usa `http://127.0.0.1:8769/taller-1/sesion-1/`.
+  Se inicia con `./previsualizar.sh`; conservar el puerto fijado en ese script
+  y reutilizar el servidor si ya está en marcha.
 - Cada sesión debe generar su propio `index.html` mediante `output-file: index.html`.
   Mantener las rutas publicadas para conservar los enlaces compartidos.
 - Al añadir sesiones, actualizar el índice general y la tabla de `README.md`.
