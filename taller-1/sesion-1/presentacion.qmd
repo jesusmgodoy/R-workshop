@@ -1,4 +1,16 @@
 ---
+title: Introducción a R y RStudio
+subtitle: Primeros pasos en programación y análisis de datos para las Ciencias Sociales
+author:
+  - name: Jesús Martín Godoy
+    # orcid: "" # Pendiente; descomentar para mostrarlo.
+    email: godoy@ugr.es
+    affiliations: "Departamento de Sociología<br>Universidad de Granada"
+  - name: Nadia Adelshina
+    # orcid: "" # Pendiente; descomentar para mostrarlo.
+    affiliations: "Departamento de Ciencia Política y de la Administración<br>Universidad de Granada"
+date: 2026-11-06
+date-format: long
 lang: es
 format:
   clean-revealjs:
@@ -6,7 +18,7 @@ format:
     width: 1280
     height: 720
     embed-resources: true
-    title-slide: false
+    title-slide: true
 ---
 
 ## {.blank}

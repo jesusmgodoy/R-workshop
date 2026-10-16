@@ -35,7 +35,8 @@ proyecto en este archivo; `CLAUDE.md` solo lo importa para evitar duplicarlas.
 
 - Utilizar el formato `clean-revealjs` y el diseño original de Clean como base.
 - Mantener la configuración actual de 1280 × 720 y los recursos incrustados.
-  Actualmente no hay portada; no añadirla por iniciativa propia.
+  La portada utiliza los metadatos definidos en el `.qmd`; respetar los datos
+  solicitados y mantener los ORCID comentados mientras no se pidan.
 - Reutilizar los componentes y la sintaxis del tema antes de crear alternativas.
 - Respetar las tipografías, los colores, las disposiciones y las convenciones que
   ya estén presentes en los materiales aprobados. No rediseñar por iniciativa propia.
