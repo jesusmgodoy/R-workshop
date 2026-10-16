@@ -6,7 +6,7 @@
 /_site/
 **/presentacion.html
 **/presentacion_files/
-/taller */sesion */mathjax-config.js
+/taller-*/sesion-*/mathjax-config.js
 
 /.quarto/
 **/*.quarto_ipynb

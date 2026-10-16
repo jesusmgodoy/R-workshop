@@ -2,6 +2,6 @@ project:
   type: default
   output-dir: _site
   render:
-    - "taller */sesion */presentacion.qmd"
+    - "taller-*/sesion-*/presentacion.qmd"
   resources:
     - index.html

@@ -15,8 +15,9 @@ proyecto en este archivo; `CLAUDE.md` solo lo importa para evitar duplicarlas.
 
 ## Archivos y tema
 
-- `taller 1/sesion 1/presentacion.qmd`: fuente editable de la primera presentación.
-- Organizar las siguientes presentaciones en `taller N/sesion N/presentacion.qmd`.
+- `taller-1/sesion-1/presentacion.qmd`: fuente editable de la primera presentación.
+- Organizar las siguientes presentaciones en `taller-N/sesion-N/presentacion.qmd`.
+- Usar nombres de carpeta en minúsculas, sin espacios y con guiones.
 - `_quarto.yml`: configuración del proyecto y selección de las presentaciones.
 - `index.html`: índice de enlaces a las sesiones; actualizarlo al añadir una sesión.
 - `_site/`: salida generada para publicación; no editarla ni versionarla.
@@ -63,7 +64,7 @@ proyecto en este archivo; `CLAUDE.md` solo lo importa para evitar duplicarlas.
   ```
 
 - Para previsualizar la primera presentación:
-  `quarto preview "taller 1/sesion 1/presentacion.qmd"`.
+  `quarto preview "taller-1/sesion-1/presentacion.qmd"`.
 - Cada sesión debe generar su propio `index.html` mediante `output-file: index.html`.
   Mantener las rutas publicadas para conservar los enlaces compartidos.
 - Al añadir sesiones, actualizar el índice general y la tabla de `README.md`.

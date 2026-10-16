@@ -26,5 +26,5 @@ de los materiales propios del taller.
 Para editar y previsualizar la presentación:
 
 ```bash
-quarto preview "taller 1/sesion 1/presentacion.qmd"
+quarto preview "taller-1/sesion-1/presentacion.qmd"
 ```
